@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #FFB8E0, #FFFBB8);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rep_container{
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+    max-width: 100%;
+    height: 70%;
+    max-height: 100%;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+#rep_navbar{
+    color:#EC7FA9;
+    font-size: 8px;
+    border-radius: 8px;
+    padding: 20px;
+    height: 30px;
+    
+}
+
+select {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    border-radius: 8px;
+  }
+
+#logoutButton{
+    padding: 10px;
+    background-color: #EC7FA9;
+    color: white;
+    font-size: 13px;    
+}
+
+h6{
+    margin-bottom: 0;
+}
+
+
+.form_button{
+    background-color: #EC7FA9;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.align_center{
+    text-align: center;
+}
+
+.rep_container form{
+    background-color: #fff;
+    padding: 40px;
+    height: 100%;
+}
+
+.rep_container input{
+    background-color: #eee;
+    border: none;
+    margin: 16px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.heading{
+    text-align: center;
+    padding: 20px;
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.tabs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    border-radius: 10px;
+    position: relative;
+
+}

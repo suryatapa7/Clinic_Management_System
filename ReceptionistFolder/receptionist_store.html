@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./receptionist_style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="rep_container">
+      <section>
+        <nav class="navbar" id="rep_navbar">
+          <h6 id="user_email"></h6>
+          <button type="button" class="btn btn-primary" id="logoutButton">
+            <h6>Logout</h6>
+          </button>
+        </nav>
+
+        <h1 class="heading"><b>Welcome Receptionist!</b></h1>
+
+        <!-- Tabs -->
+        <ul
+          class="nav nav-tabs justify-content-center"
+          id="myTab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="add-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#add-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="add-tab-pane"
+              aria-selected="true"
+              style="color: #f60485;"
+            >
+              Add Patient
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="view-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#view-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="view-tab-pane"
+              aria-selected="false"
+              style="color: #eadb06;"
+            >
+              View Patient
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="bill-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#bill-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="bill-tab-pane"
+              aria-selected="false"
+              style="color: #f60485;"
+            >
+              Generate Bill
+            </button>
+          </li>
+        </ul>
+
+        <!-- Tab Contents -->
+        <div class="tab-content" id="myTabContent">
+          <!-- Add New Patient -->
+          <div
+            class="tab-pane fade show active"
+            id="add-tab-pane"
+            role="tabpanel"
+            aria-labelledby="add-tab"
+            tabindex="0"
+          >
+            <h3 class="heading">New Patient Details</h3>
+            <label>Patient Name:</label>
+            <div>
+              <input
+                required
+                type="text"
+                id="patientName"
+                placeholder="Enter Patient Name"
+              />
+            </div>
+            <label>Address:</label>
+            <div>
+              <input
+                required
+                type="text"
+                id="patientAddress"
+                placeholder="Enter Address"
+              />
+            </div>
+            <label>Age:</label>
+            <div>
+              <input
+                required
+                type="number"
+                id="patientAge"
+                placeholder="Enter Age"
+              />
+            </div>
+            <label>Contact Number:</label>
+            <div>
+              <input
+                required
+                type="number"
+                id="patientContact"
+                placeholder="Enter Contact Number"
+              />
+            </div>
+            <div class="align_center">
+              <button class="form_button" id="addPatientButton">
+                Add Patient
+              </button>
+            </div>
+          </div>
+
+          <!-- View Patient History -->
+          <div
+            class="tab-pane fade"
+            id="view-tab-pane"
+            role="tabpanel"
+            aria-labelledby="view-tab"
+            tabindex="0"
+          >
+            <h3 class="heading">View Patient History</h3>
+            <select id="patientHistorySelect">
+              <option value="">Select Patient</option>
+            </select>
+            <div id="patientHistory"></div>
+          </div>
+
+          <!-- Generate Bill -->
+          <div
+            class="tab-pane fade"
+            id="bill-tab-pane"
+            role="tabpanel"
+            aria-labelledby="bill-tab"
+            tabindex="0"
+          >
+            <h3 class="heading">Bill Generation</h3>
+            <select id="patientSelect">
+              <option value="">Select Patient</option>
+            </select>
+            <input
+              type="number"
+              id="billAmount"
+              placeholder="Enter Bill Amount"
+            />
+            <div class="align_center">
+              <button class="form_button" id="generateBillButton">
+                Generate Bill
+              </button>
+            </div>
+            <div id="billDetails"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="../javascript/receptionist.js"></script>
+    <script type="module" src="../javascript/logout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+</body>
+</html>
