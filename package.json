@@ -1,0 +1,20 @@
+{
+  "name": "clinic_management_system",
+  "version": "1.0.0",
+  "description": "The **Clinic Management System** is a web-based application designed to streamline operations in a clinic. It facilitates seamless interaction between receptionists and doctors while managing patient records, prescriptions and billing. The system is built with **HTML**, **CSS**, **JavaScript** and leverages **Firebase** for backend services.",
+  "homepage": "https://github.com/suryatapa7/Clinic_Management_System#readme",
+  "bugs": {
+    "url": "https://github.com/suryatapa7/Clinic_Management_System/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suryatapa7/Clinic_Management_System.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
